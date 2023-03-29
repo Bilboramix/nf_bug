@@ -18,4 +18,6 @@ expressApp.get("/", (req, res) => {
 
 expressApp.use(test);
 
-expressApp.listen(process.env.HTTP_PORT || 3310);
+expressApp.listen(process.env.HTTP_PORT || 3310, () => {
+  console.log(`Server running on port ${process.env.HTTP_PORT || 3310}`);
+});
